@@ -1,0 +1,20 @@
+1. Install python 3.x
+2. Run the following commands to install the required modules:
+	pip install pandas
+	pip install requests
+	pip install json
+3. Fill out or replace the following variables:
+	Headers:
+		Auth: #Replace with the value of the Authorization header
+		Auth2: #Replace with the value of the Cookie header
+		url: #Replace the IP or hostname with the IP or hostname of your device
+	Body (payload):
+		DateTime_From: #Replace with the desired initial date and time
+		DateTime_To: #Fill out with the desired end date and time
+		Value: #Fill out with the application name for a specific application. Set as All for all the applications.
+		ID: #Get this information from the developers-tool*
+Note: This variables and any information that can be filtered from GUI interface, may be extracted from any browser using developer-tools and looking the request parameters.
+*The parameter ID can only be extracted from the browser using developer-tools. There is no way to extrac this information from the GUI.
+4. Run the script and get the file as output.csv.
+5. Delete any column that you don't need.
+	
