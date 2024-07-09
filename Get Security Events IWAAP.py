@@ -5,8 +5,8 @@ import json
 # Suppress SSL warnings if needed
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-Auth='Basic YWRtaW46cmFkd2cdyZQ==' #Replace with the value in the Authorization header
-Auth2='io=JcXv1UQ2LFtOAiafAA1n; vantage_auth=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwiYXB3IjoicmFkd2FyZSIsInJvbGUiOiJBZG1pbmlzdHJhdG9ycyIsIndlYkFwcElkcyI6W10sImFwdCI6Ijk5OUQ0RkFGRFRCZkI2NDlDOTU5UEZmMUk1ZjFGODlDIiwiaWF0IjoxNzIwNDg0MDA2LCJleHAiOjE3MjA0ODUwMjZ9.RFFtZUT7m4F8Jd77VD7HBFXPkwshrtmJc-u6pAV-OAS7iU5npeojf_NKPO9ewOrGxjjIM9_odfI-S5rCoGemAA' #Replace with the value in the Cookie header
+Auth='Basic YWRtaW46cmFkd2FyZQ==' #Replace with the value in the Authorization header
+Auth2='vantage_auth=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFkbWluIiwiYXB3IjoicmFkd2FyZSIsInJvbGUiOiJBZG1pbmlzdHJhdG9ycyIsIndlYkFwcElkcyI6W10sImFwdCI6IjRGNDNCQjJCNlA0YkExOTQyNDE0TDlXQUVFYkE5NzRCIiwiaWF0IjoxNzIwNDg2Mzc2LCJleHAiOjE3MjA0ODczOTZ9.tGr6chP94gMYNoXyZz1Bkl4PpgbXp5eGkMiu4hN24FrFt3BL7VaKfBmB9y53B7JzQsRnUGmsMDNqxh2Yrl2HLg; io=_kChfH2vP5AtwLJGAA-G' #Replace with the value in the Cookie header
 
 Index=0
 # Define the API endpoint and headers if necessary
@@ -149,7 +149,7 @@ if response.status_code == 200:
     csv_file_path = 'output.csv'
     # Save the DataFrame to a CSV file
     df.to_csv(csv_file_path, index=False, mode='a')
-    print("Index", Index, "has been writted")
+    print("Index", Index, "has been written")
     while Index in range(0, 100000):
         Index+=1
         payload = {
@@ -286,7 +286,7 @@ if response.status_code == 200:
                 csv_file_path = 'output.csv'
                 # Save the DataFrame to a CSV file
                 df.to_csv(csv_file_path, index=False, mode='a',header=False)
-                print("Index", Index, "has been writted")
+                print("Index", Index, "has been written")
                 
 
 
